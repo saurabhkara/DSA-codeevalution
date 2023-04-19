@@ -13,6 +13,7 @@ function linearSearch(arr, target){
 
 console.log(linearSearch(arr,2));
 console.log(linearSearch(arr,4));
+console.log(linearSearch(arr,8));
 
 
 //Time Complexity T(n) = O(n);
