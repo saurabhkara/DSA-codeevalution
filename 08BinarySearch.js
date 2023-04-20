@@ -5,7 +5,7 @@ function binarySearch(arr,target){
 
     while(leftIndex <= rightIndex){
         let middleIndex = Math.floor((leftIndex + rightIndex)/2);
-        console.log(leftIndex,rightIndex,middleIndex);
+        // console.log(leftIndex,rightIndex,middleIndex);
         if(arr[middleIndex] === target ){
             return middleIndex;
         }
@@ -20,5 +20,5 @@ function binarySearch(arr,target){
 };
 
 let arr = [ 2,4,5,7,8,9,12];
-// console.log(binarySearch(arr,5));
+console.log(binarySearch(arr,5));
 console.log(binarySearch(arr,6));
