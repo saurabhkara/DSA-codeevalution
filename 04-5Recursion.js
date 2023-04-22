@@ -8,7 +8,7 @@ function head(n){
     head(n-1)
 }
 
-// head(5);
+head(5);
 
 function tail(n){
     if(n<0){
@@ -18,5 +18,5 @@ function tail(n){
     console.log(n);
 }
 
-// tail(5);
+tail(5);
 
