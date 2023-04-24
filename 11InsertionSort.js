@@ -38,5 +38,25 @@ let arr = [20,-6,8,4,2];
 // insertionSort(arr);
 // console.log(arr);
 
-insertionSortWhile(arr);
+// insertionSortWhile(arr);
+// console.log(arr);
+
+
+function recursriveInsertionSort(arr, n){
+    if(n<=1){
+        return
+    }
+    recursriveInsertionSort(arr,n-1);
+    let last = arr[n-1];
+    let j= n-2;
+
+    while(j>=0 && arr[j]>last){
+        arr[j+1]=arr[j];
+        j--;
+    }
+
+    arr[j+1]=last;
+}
+
+recursriveInsertionSort(arr, arr.length);
 console.log(arr);
