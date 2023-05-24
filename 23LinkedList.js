@@ -104,7 +104,15 @@ class LinkedList {
     if(this.isEmpty()){
         console.log('Linked list is empty');
     }else{
-
+      let prev= null;
+      let curr=this.head;
+      while(curr){
+        let next = curr.next;
+        curr.next=prev;
+        prev=curr;
+        curr= next;
+      }
+      this.head=prev;
     }
   }
 }
@@ -122,4 +130,5 @@ LL.insert(25, 2);
 LL.insert(35, 3);
 console.log(LL.print());
 console.log(LL.remove(1));
+LL.reverse();
 console.log(LL.print());
