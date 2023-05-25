@@ -112,8 +112,17 @@ class LinkedListWithTail{
             console.log('Cannot reverse linked list is empty');
             return null;
         }else{
+            let prev = null;
+            let curr = this.head;
+            this.tail=this.head;
+            while(curr){
+              let temp = curr;
+              curr=curr.next;
+              temp.next=prev;
+              prev=temp;  
+            }
+            this.head=prev;
 
-            
         }
 
 
@@ -129,4 +138,5 @@ LL.insert(23,2);
 LL.removeFromFront();
 console.log(LL.removeFromEnd())
 LL.print();
-console.log(LL)
+LL.reverse();
+LL.print();
